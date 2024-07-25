@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+<div class="result-container">
+  <h2>Diet Recommendation</h2>
+  <p><strong>Recipe Name:</strong> {{ prediction.recipe_name }}</p>
+  <p><strong>Ingredients List:</strong> {{ prediction.ingredients_list }}</p>
+  <img src="{{ prediction.image_url }}" alt="Recipe Image" />
+  <a href="{{ url_for('main') }}">Go Back</a>
+</div>
+{% endblock %}
